@@ -14,6 +14,6 @@ public class StalkerService {
     PersistenceManager manager;
 
     public void insertUserAction(String login, Date date, Action action, Long itemId) {
-        
+
     }
 }

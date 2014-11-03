@@ -9,7 +9,7 @@
 
     <logger name="ACHILLES_DML_STATEMENT" level="OFF"/>
 
-    <logger name="ACHILLES_DDL_SCRIPT" level="DEBUG"/>
+    <logger name="ACHILLES_DDL_SCRIPT" level="OFF"/>
 
     <logger name="info.archinnov.achilles.demo.entity.User" level="OFF"/>
 

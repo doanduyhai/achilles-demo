@@ -6,6 +6,8 @@ import java.util.UUID;
 import javax.inject.Inject;
 import info.archinnov.achilles.demo.entity.Message;
 import info.archinnov.achilles.persistence.PersistenceManager;
+import info.archinnov.achilles.query.cql.NativeQuery;
+import info.archinnov.achilles.type.TypedMap;
 
 public class MessageService {
 
@@ -17,8 +19,6 @@ public class MessageService {
     }
 
     public List<Message> fetchMessages(String login, UUID lastMessageDate, int pageSize) {
-
         return null;
-
     }
 }

@@ -20,6 +20,6 @@ public class LoginToLowerCase implements Interceptor<Message> {
 
     @Override
     public List<Event> events() {
-        return Arrays.asList(Event.PRE_PERSIST, Event.PRE_UPDATE);
+        return Arrays.asList(Event.PRE_INSERT, Event.PRE_UPDATE);
     }
 }

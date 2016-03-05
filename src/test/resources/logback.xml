@@ -7,11 +7,11 @@
     </appender>
 
 
-    <logger name="ACHILLES_DML_STATEMENT" level="OFF"/>
+    <logger name="ACHILLES_DML_STATEMENT" level="TRACE"/>
 
-    <logger name="ACHILLES_DDL_SCRIPT" level="OFF"/>
+    <logger name="ACHILLES_DDL_SCRIPT" level="DEBUG"/>
 
-    <logger name="info.archinnov.achilles.demo.entity.User" level="OFF"/>
+    <logger name="info.archinnov.achilles.demo.c_data_types_and_codecs.EmailMessage" level="TRACE"/>
 
 
 

@@ -7,11 +7,11 @@
     <groupId>info.archinnov</groupId>
     <artifactId>achilles-demo</artifactId>
     <version>1.0</version>
+    <name>Achilles Demo</name>
+    <description>Achilles Demo</description>
 
     <properties>
-        <achilles.version>3.0.8-SNAPSHOT</achilles.version>
-
-        <lombok.version>1.14.4</lombok.version>
+        <achilles.version>4.1.0</achilles.version>
         <slf4j.version>1.7.6</slf4j.version>
         <logback.version>1.1.2</logback.version>
 
@@ -32,14 +32,14 @@
 
         <dependency>
             <groupId>info.archinnov</groupId>
-            <artifactId>achilles-junit</artifactId>
+            <artifactId>achilles-embedded</artifactId>
             <version>${achilles.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>slf4j-log4j12</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>info.archinnov</groupId>
+            <artifactId>achilles-schema-generator</artifactId>
+            <version>${achilles.version}</version>
         </dependency>
 
         <dependency>
@@ -54,7 +54,11 @@
             <version>${hibernate-validator.version}</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9</version>
+        </dependency>
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -92,13 +96,6 @@
             <version>${logback.version}</version>
         </dependency>
 
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-
         <!-- TEST -->
         <dependency>
             <groupId>junit</groupId>
@@ -106,18 +103,45 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>info.archinnov</groupId>
+            <artifactId>achilles-junit</artifactId>
+            <version>${achilles.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

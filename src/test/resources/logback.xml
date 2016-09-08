@@ -11,7 +11,7 @@
 
     <logger name="ACHILLES_DDL_SCRIPT" level="DEBUG"/>
 
-    <logger name="info.archinnov.achilles.demo.c_data_types_and_codecs.EmailMessage" level="TRACE"/>
+    <logger name="info.archinnov.achilles.demo.a_bean_mapping.EmailMessage" level="TRACE"/>
 
 
 
